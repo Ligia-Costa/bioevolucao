@@ -40,8 +40,10 @@
                 <span class="text-xl font-bold text-bio-800">BioEvolução</span>
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-bio-700">
-                <a href="#radiacao" class="hover:text-bio-500 transition">Radiação Adaptativa</a>
-                <a href="#convergencia" class="hover:text-bio-500 transition">Convergência Evolutiva</a>
+                <a href="#radiacao" class="hover:text-bio-500 transition">Radiação</a>
+                <a href="#convergencia" class="hover:text-bio-500 transition">Convergência</a>
+                <a href="#mecanismos" class="hover:text-bio-500 transition">Mecanismos</a>
+                <a href="#quiz" class="hover:text-bio-500 transition">Quiz</a>
                 <a href="#autoras" class="hover:text-bio-500 transition">Autoras</a>
             </div>
         </div>
@@ -174,6 +176,143 @@
         </div>
     </section>
 
+    <section id="mecanismos" class="py-24 px-6 bg-slate-50 border-t border-bio-200">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Mecanismos Evolutivos</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">
+                    Como a biodiversidade é moldada? Entenda os motores biológicos que impulsionam a mudança.
+                </p>
+            </div>
+
+            <div id="mechanisms-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+            </div>
+
+            <div id="mechanism-detail" class="hidden mt-8 reveal">
+                <div class="bg-slate-900 text-white rounded-2xl p-8 md:p-12 relative shadow-2xl overflow-hidden">
+                    <button id="close-detail" class="absolute top-6 right-6 text-slate-400 hover:text-white bg-slate-800/50 p-2 rounded-full hover:bg-slate-800 transition">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                    <div id="detail-content" class="relative z-10">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="py-24 px-6 max-w-4xl mx-auto bg-white">
+        <div class="text-center mb-12 reveal">
+            <span class="text-emerald-500 font-bold tracking-wider text-sm uppercase mb-2 block">Teste seu conhecimento</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Desafio Evolutivo</h2>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden min-h-[400px] relative p-8 md:p-12 reveal">
+            <div id="quiz-container">
+                <div class="w-full bg-slate-100 h-2 rounded-full mb-8 overflow-hidden">
+                    <div id="progress-bar" class="bg-emerald-500 h-full transition-all duration-500" style="width: 0%"></div>
+                </div>
+                
+                <h3 id="question-text" class="text-xl font-bold text-slate-800 mb-6">Carregando...</h3>
+                
+                <div id="options-container" class="space-y-3 mb-8">
+                    </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div id="feedback-area" class="flex-1 text-sm p-3 rounded-lg hidden"></div>
+                    <button id="quiz-action-btn" class="px-6 py-3 bg-slate-900 text-white rounded-lg font-bold hover:bg-slate-800 transition-colors disabled:opacity-50">
+                        Verificar
+                    </button>
+                </div>
+            </div>
+
+            <div id="result-container" class="hidden flex-col items-center justify-center text-center h-full py-10">
+                <div class="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 mb-6">
+                    <i data-lucide="trophy" class="w-12 h-12"></i>
+                </div>
+                <h3 class="text-3xl font-bold text-slate-900 mb-2">Quiz Finalizado!</h3>
+                <p class="text-slate-600 mb-8">Você acertou <strong id="final-score" class="text-emerald-600 text-xl">0</strong> perguntas.</p>
+                <button id="restart-quiz" class="px-8 py-3 bg-slate-900 text-white rounded-lg font-bold hover:bg-slate-800 transition-colors flex items-center gap-2">
+                    <i data-lucide="refresh-cw" class="w-4 h-4"></i> Tentar Novamente
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparacao" class="py-24 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12 reveal">
+                <span class="text-emerald-500 font-bold tracking-wider text-sm uppercase mb-2 block">Síntese</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Quadro Comparativo</h2>
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow-xl border border-slate-200 reveal">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[600px] bg-white">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-900">
+                                <th class="p-6 font-bold border-b border-slate-200 w-1/3 text-sm uppercase text-slate-500">Característica</th>
+                                <th class="p-6 font-bold border-b border-slate-200 text-emerald-700 w-1/3 bg-emerald-50/30">Radiação Adaptativa</th>
+                                <th class="p-6 font-bold border-b border-slate-200 text-indigo-700 w-1/3 bg-indigo-50/30">Convergência Evolutiva</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-600 text-sm md:text-base">
+                            <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                <td class="p-6 font-semibold text-slate-800">Origem</td>
+                                <td class="p-6 border-l border-slate-100">Ancestral Comum Único</td>
+                                <td class="p-6 border-l border-slate-100">Ancestrais Diferentes</td>
+                            </tr>
+                            <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                <td class="p-6 font-semibold text-slate-800">Direção</td>
+                                <td class="p-6 border-l border-slate-100"><span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded text-xs font-bold">Divergente</span></td>
+                                <td class="p-6 border-l border-slate-100"><span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs font-bold">Convergente</span></td>
+                            </tr>
+                            <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                <td class="p-6 font-semibold text-slate-800">Estruturas</td>
+                                <td class="p-6 border-l border-slate-100">Homólogas (mesma origem)</td>
+                                <td class="p-6 border-l border-slate-100">Análogas (mesma função)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="glossario" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex items-center gap-3 mb-10 justify-center md:justify-start reveal">
+                <div class="p-3 bg-emerald-100 text-emerald-600 rounded-xl shadow-sm">
+                    <i data-lucide="book-open" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900">Glossário</h3>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 reveal">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-md transition">
+                    <h4 class="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Estruturas Homólogas
+                    </h4>
+                    <p class="text-sm text-slate-600">Possuem a mesma origem embrionária e evolutiva (mesmo ancestral), podendo ter ou não a mesma função. Ex: Braço humano e nadadeira de baleia.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-md transition">
+                    <h4 class="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Estruturas Análogas
+                    </h4>
+                    <p class="text-sm text-slate-600">Possuem a mesma função devido à adaptação a ambientes similares, mas origens evolutivas diferentes. Ex: Asa de inseto e asa de ave.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="referencias" class="py-20 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="mb-10 reveal">
+                <h3 class="text-2xl font-bold text-slate-800 mb-2">Fontes e Referências Online</h3>
+                <p class="text-slate-500">Webgrafia consultada para a elaboração do conteúdo.</p>
+            </div>
+            <div id="references-grid" class="grid gap-4 reveal">
+                </div>
+        </div>
+    </section>
+
     <section id="autoras" class="py-16 bg-white border-t border-bio-100">
         <div class="container mx-auto px-6 max-w-4xl">
             <h3 class="text-2xl font-bold text-center text-bio-900 mb-10 reveal">Responsáveis pela Pesquisa</h3>
@@ -197,24 +336,22 @@
     </section>
 
     <footer class="bg-bio-900 text-bio-100 py-12 px-6">
-        <div class="container mx-auto max-w-6xl grid md:grid-cols-2 gap-8">
-            <div>
-                <h4 class="text-white font-bold text-lg mb-4 flex items-center gap-2"><i data-lucide="book-open" class="w-5 h-5"></i> Fontes & Referências</h4>
-                <ul class="space-y-2 text-sm opacity-80">
-                    <li><a href="https://www.youtube.com/watch?v=CmnlSU8-q_k" target="_blank" class="hover:text-white hover:underline">Vídeo: Radiação Adaptativa</a></li>
-                    <li><a href="https://querobolsa.com.br/enem/biologia/convergencia-adaptativa" target="_blank" class="hover:text-white hover:underline">Quero Bolsa</a></li>
-                    <li><a href="https://www.todamateria.com.br/irradiacao-adaptativa/" target="_blank" class="hover:text-white hover:underline">Toda Matéria</a></li>
-                    <li><a href="https://ecologia.ib.usp.br/evosite/evo101/VIIB1aAdaptiveRadiation.shtml" target="_blank" class="hover:text-white hover:underline">USP - Evolução 101</a></li>
-                </ul>
+        <div class="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2 text-white font-bold text-xl">
+                <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center text-slate-900">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                </div>
+                BioEvolução
             </div>
-            <div class="text-right flex flex-col justify-end">
-                <p class="text-sm">Desenvolvido para Atividade 8e - Biologia.</p>
-                <p class="text-xs opacity-50 mt-2">© 2025 BioEvolução</p>
-            </div>
+            <p class="text-sm text-center md:text-right max-w-md opacity-80">
+                Projeto educativo demonstrativo. Desenvolvido para Atividade 8e - Biologia.
+            </p>
+        </div>
+        <div class="max-w-6xl mx-auto mt-8 pt-8 border-t border-bio-800 text-xs text-center text-bio-400">
+            © 2025 BioEvolução.
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
